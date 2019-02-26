@@ -7,10 +7,10 @@ body {
   margin: 0;
 }
 
-.main {
+.navigation {
   width: 100%;
-  padding: 30px 0px 0px;
-  background: none;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .links ul {
@@ -20,27 +20,31 @@ body {
   color: rgb(255, 255, 255);
   text-decoration: none;
   list-style: none;
+  margin: 0;
+  padding-top: 20px;
 }
+
 a {
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
+
 a:hover {
   transition: all 0.3s ease-in-out;
   color: rgb(204, 192, 192);
 }
+
 .static {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  padding: 30px 0 0 100px;
 }
+
 .intro {
   line-height: 1.5;
   font-size: 30px;
-  align-self: center;
-  padding-bottom: 40px;
+  padding-top: 30px;
 }
 .logo {
-  max-width: 100%;
-  max-height: 300px;
-  border-radius: 50%;
+  height: 300px;
 }
