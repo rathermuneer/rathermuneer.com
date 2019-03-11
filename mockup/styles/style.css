@@ -1,0 +1,299 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-style: normal;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.navigation {
+  background-color: #211d1c;
+  padding: 0.625rem 1.25rem;
+}
+
+.footer .container,
+.navigation .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  padding-left: 50px;
+}
+
+.links {
+  padding-right: 50px;
+}
+.links ul {
+  display: flex;
+  list-style: none;
+}
+
+.links a {
+  background-color: #211d1c;
+  opacity: 0.8;
+}
+
+.links a:hover {
+  background-color: rgb(71, 71, 71);
+  opacity: 1;
+}
+
+.links .navigation--dropdown {
+  display: none;
+  position: absolute;
+}
+
+.navigation--dropdown li {
+  display: block;
+}
+
+.dropdown--link:hover + ul,
+.links .navigation--dropdown:hover {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.banner {
+  color: #fff;
+  padding-top: 100px;
+  text-align: center;
+  background-image: url(../images/banner.png);
+}
+
+.scroll-text {
+  color: grey;
+  margin-top: 100px;
+  padding-bottom: 30px;
+}
+
+.service--images {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  text-align: center;
+  padding-top: 35px;
+}
+
+.image-one {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  border: 1px solid grey;
+  padding-top: 50px;
+}
+
+.our-success-story {
+  margin: auto;
+  text-align: center;
+  padding: 50px 0 50px;
+  background-color: #d6d1d1;
+}
+.map .container {
+  display: flex;
+  padding: 50px;
+}
+
+.marius-heading {
+  font-size: 18px;
+  padding-top: 20px;
+}
+.marius-subheading {
+  padding-top: 20px;
+  font-size: 14px;
+}
+
+.testimonials {
+  background-color: #f8f7f7;
+  padding: 50px 0 50px;
+}
+
+.testimonial-heading {
+  text-align: center;
+}
+
+.testimonial-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0 30px;
+}
+.testimonial-client {
+  padding-top: 60px;
+  color: black;
+}
+.testimonial-text {
+  color: grey;
+  text-align: center;
+  width: 270px;
+  height: 150px;
+  background-color: white;
+  border-radius: 10px;
+  padding-top: 65px;
+  font-size: 14px;
+}
+
+.story-title {
+  margin-bottom: 20px;
+}
+
+.story-subtitle {
+  margin-bottom: 20px;
+}
+
+.stories--wrapper {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  color: #81736f;
+}
+.story {
+  margin-right: 30px;
+}
+
+.story:last-child {
+  margin-right: 0;
+}
+.story-title .story-subtitle {
+  text-align: center;
+}
+
+.story--text {
+  font-size: 18px;
+  color: black;
+  margin-top: 20px;
+}
+
+.story--service {
+  font-size: 14px;
+  color: grey;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.story--image {
+  color: #fff;
+  text-align: center;
+  width: 270px;
+  height: 150px;
+  background-color: #81736f;
+  border-radius: 10px;
+  padding-top: 65px;
+  font-size: 14px;
+}
+.middle {
+  height: 100%;
+  background-color: rgba(115, 112, 128, 0.995);
+  color: #fff;
+  text-align: center;
+  padding: 100px 0 100px 0;
+  background-image: url(../images/middle.png);
+}
+
+.middle h2 {
+  padding-bottom: 20px;
+}
+.navigation a {
+  padding: 5px 20px;
+  display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-size: 20px;
+}
+
+.text--area {
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.middle--container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.contact--input {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .email {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .contact--input {
+    width: 32%;
+    margin-bottom: 0;
+  }
+
+  .form--area {
+    display: flex;
+  }
+}
+
+#msg {
+  width: 100%;
+  min-height: 200px;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+.button {
+  padding-top: 20px;
+}
+
+button {
+  background: red;
+  width: 120px;
+  height: 50px;
+  border: 1px solid red;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 20px;
+}
+.copyright {
+  padding-left: 50px;
+}
+
+.footer {
+  background-color: #241f1e;
+  padding: 20px 20px;
+  color: #fff;
+  margin: 0;
+}
+
+.footer a {
+  padding: 0 10px 0 10px;
+}
+
+.footer--links {
+  display: flex;
+  padding-right: 50px;
+}
+
+.footer--links ul {
+  display: flex;
+  list-style: none;
+}
