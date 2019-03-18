@@ -15,34 +15,36 @@ body {
   margin: auto;
 }
 
+.hamburger-container {
+  display: flex;
+}
 .navigation {
   background-color: #211d1c;
   padding: 0.625rem 1.25rem;
 }
+.hamburger {
+  color: white;
+  padding-right: 20px;
+}
 
-.footer .container,
-.navigation .container {
-  display: flex;
-  justify-content: space-between;
+.icon-menu {
 }
 
 .logo {
-  padding-left: 50px;
+  text-align: center;
 }
 
 .links {
-  padding-right: 50px;
-}
-.links ul {
-  display: flex;
-  list-style: none;
+  display: none;
 }
 
 .links a {
   background-color: #211d1c;
   opacity: 0.8;
 }
-
+.logo span {
+  color: red;
+}
 .links a:hover {
   background-color: rgb(71, 71, 71);
   opacity: 1;
@@ -72,36 +74,43 @@ a {
   padding-top: 100px;
   text-align: center;
   background-image: url(../images/banner.png);
+  background-position: center;
 }
 
+.banner-text > h2 {
+  font-size: 30px;
+}
+
+.service--images {
+  display: block;
+  margin-top: 30px;
+}
+
+.image-one {
+  display: flex;
+  padding: 10px;
+  margin: auto;
+  border: 1px solid grey;
+}
+
+.image-one > p {
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+}
 .scroll-text {
   color: grey;
   margin-top: 100px;
   padding-bottom: 30px;
 }
 
-.service--images {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  text-align: center;
-  padding-top: 35px;
-}
-
-.image-one {
-  width: 200px;
-  height: 200px;
-  margin: auto;
-  border: 1px solid grey;
-  padding-top: 50px;
-}
-
 .our-success-story {
   margin: auto;
   text-align: center;
   padding: 50px 0 50px;
-  background-color: #d6d1d1;
+  background-color: #f8f3f3;
 }
+
 .map .container {
   display: flex;
   padding: 50px;
@@ -131,10 +140,28 @@ a {
   margin: 30px 0 30px;
 }
 .testimonial-client {
-  padding-top: 60px;
   color: black;
 }
-.testimonial-text {
+
+.client-image {
+  display: flex;
+  padding-top: 60px;
+}
+
+.testimonial-text > p:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #fff;
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+}
+
+.testimonial-text > p {
   color: grey;
   text-align: center;
   width: 270px;
@@ -143,10 +170,13 @@ a {
   border-radius: 10px;
   padding-top: 65px;
   font-size: 14px;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .story-title {
   margin-bottom: 20px;
+  font-size: 28px;
 }
 
 .story-subtitle {
@@ -154,11 +184,12 @@ a {
 }
 
 .stories--wrapper {
-  display: flex;
+  display: block;
   width: 90%;
   margin: auto;
   color: #81736f;
 }
+
 .story {
   margin-right: 30px;
 }
@@ -186,20 +217,22 @@ a {
 .story--image {
   color: #fff;
   text-align: center;
-  width: 270px;
+  width: 275px;
   height: 150px;
   background-color: #81736f;
   border-radius: 10px;
   padding-top: 65px;
   font-size: 14px;
 }
+
 .middle {
   height: 100%;
   background-color: rgba(115, 112, 128, 0.995);
   color: #fff;
   text-align: center;
   padding: 100px 0 100px 0;
-  background-image: url(../images/middle.png);
+  background: url(../images/middle.png) no-repeat;
+  background-size: cover;
 }
 
 .middle h2 {
@@ -235,7 +268,38 @@ a {
   border: none;
 }
 
+.icon-user {
+  font-size: 2rem;
+  border: 6px solid #fff;
+  border-radius: 100%;
+  padding: 4px;
+}
+
 @media screen and (min-width: 768px) {
+  .footer .container,
+  .navigation .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .logo {
+    padding-left: 50px;
+  }
+  .links {
+    display: flex;
+  }
+  .links {
+    padding-right: 50px;
+  }
+  .links ul {
+    display: flex;
+    list-style: none;
+  }
+
   .email {
     margin-left: 2%;
     margin-right: 2%;
@@ -296,4 +360,79 @@ button {
 .footer--links ul {
   display: flex;
   list-style: none;
+}
+.our-success-story {
+  display: flex;
+}
+
+@media screen and (min-width: 1025px) {
+  .footer .container,
+  .navigation .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .links {
+    display: flex;
+  }
+  .logo {
+  }
+
+  .service--images {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    padding-top: 35px;
+  }
+
+  .image-one {
+    height: 200px;
+    margin: auto;
+    border: 1px solid grey;
+    padding-top: 50px;
+    display: block;
+  }
+
+  .our-success-story {
+    margin: auto;
+    text-align: center;
+    padding: 50px 0 50px;
+    background-color: #d6d1d1;
+  }
+
+  .stories--wrapper {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    color: #81736f;
+  }
+
+  .story--image {
+    color: #fff;
+    text-align: center;
+    width: 270px;
+    height: 150px;
+    background-color: #81736f;
+    border-radius: 10px;
+    padding-top: 65px;
+    font-size: 14px;
+  }
+
+  .story-title {
+    margin-bottom: 20px;
+  }
+
+  .map .container {
+    display: flex;
+    padding: 50px;
+  }
+
+  .marius-heading {
+    font-size: 18px;
+    padding-top: 20px;
+  }
+  .marius-subheading {
+    padding-top: 20px;
+    font-size: 14px;
+  }
 }
