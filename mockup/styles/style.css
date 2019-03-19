@@ -112,10 +112,15 @@ a {
 }
 
 .map .container {
-  display: flex;
   padding: 50px;
 }
+img {
+  max-width: 100%;
+}
 
+.marius-map {
+  padding-top: 15px;
+}
 .marius-heading {
   font-size: 18px;
   padding-top: 20px;
@@ -275,6 +280,36 @@ a {
   padding: 4px;
 }
 
+.footer .container {
+  color: grey;
+  width: 90%;
+  margin: auto;
+}
+
+.footer {
+  text-align: center;
+}
+
+.copyright {
+  margin-bottom: 10px;
+}
+
+.footer--links {
+  display: flex;
+  justify-content: center;
+}
+.story:nth-child(3),
+.story:nth-child(4) {
+  display: none;
+}
+
+.testimonial-text {
+  display: none;
+}
+
+.testimonial-text:first-child {
+  display: block;
+}
 @media screen and (min-width: 768px) {
   .footer .container,
   .navigation .container {
@@ -313,6 +348,27 @@ a {
   .form--area {
     display: flex;
   }
+
+  .footer--links {
+    display: flex;
+  }
+
+  .story:nth-child(3),
+  .story:nth-child(4) {
+    display: block;
+  }
+
+  .testimonial-text {
+    display: block;
+  }
+
+  .footer .container {
+    color: grey;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+  }
 }
 
 #msg {
@@ -337,9 +393,6 @@ button {
   color: #fff;
   font-size: 20px;
 }
-.copyright {
-  padding-left: 50px;
-}
 
 .footer {
   background-color: #241f1e;
@@ -350,11 +403,6 @@ button {
 
 .footer a {
   padding: 0 10px 0 10px;
-}
-
-.footer--links {
-  display: flex;
-  padding-right: 50px;
 }
 
 .footer--links ul {
@@ -373,8 +421,6 @@ button {
   }
   .links {
     display: flex;
-  }
-  .logo {
   }
 
   .service--images {
