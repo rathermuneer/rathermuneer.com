@@ -27,7 +27,16 @@ body {
   padding-right: 20px;
 }
 
-.icon-menu {
+.icon-user {
+  background-color: grey;
+}
+
+.icon-arrow-left {
+  border-radius: 2px solid;
+}
+
+.testimonial-client {
+  padding-left: 12px;
 }
 
 .logo {
@@ -89,7 +98,7 @@ a {
 .image-one {
   display: flex;
   padding: 10px;
-  margin: auto;
+  margin: 10px;
   border: 1px solid grey;
 }
 
@@ -150,7 +159,7 @@ img {
 
 .client-image {
   display: flex;
-  padding-top: 60px;
+  padding-top: 30px;
 }
 
 .testimonial-text > p:after {
@@ -196,7 +205,7 @@ img {
 }
 
 .story {
-  margin-right: 30px;
+  text-align: start;
 }
 
 .story:last-child {
@@ -222,7 +231,8 @@ img {
 .story--image {
   color: #fff;
   text-align: center;
-  width: 275px;
+  width: 100%;
+  max-width: 345px;
   height: 150px;
   background-color: #81736f;
   border-radius: 10px;
@@ -310,7 +320,40 @@ img {
 .testimonial-text:first-child {
   display: block;
 }
+
+.desktop-only {
+  display: none;
+}
+
+.icon-quote-left:before {
+  content: "\e900";
+  color: orangered;
+}
+
+.icon-cheveron-down:after {
+  content: "\e902";
+  color: grey;
+}
+
+.icon-message:before {
+  content: "\e901";
+  color: #fff;
+}
+
+.icon-message-box {
+  color: #fff;
+  background-color: orangered;
+  display: block;
+}
+
 @media screen and (min-width: 768px) {
+  .stories--wrapper {
+    display: flex;
+  }
+
+  .story {
+    margin: 10px;
+  }
   .footer .container,
   .navigation .container {
     display: flex;
@@ -318,6 +361,9 @@ img {
   }
 
   .hamburger {
+    display: none;
+  }
+  .icon-message-box {
     display: none;
   }
 
@@ -369,6 +415,12 @@ img {
     justify-content: space-between;
     font-size: 12px;
   }
+  .desktop-only {
+    display: block;
+  }
+  .mobile-only {
+    display: none;
+  }
 }
 
 #msg {
@@ -395,10 +447,11 @@ button {
 }
 
 .footer {
-  background-color: #241f1e;
+  background: linear-gradient(#453d3d, #262020);
   padding: 20px 20px;
   color: #fff;
   margin: 0;
+  background-repeat: repeat-x;
 }
 
 .footer a {
@@ -414,6 +467,9 @@ button {
 }
 
 @media screen and (min-width: 1025px) {
+  .icon-message-box {
+    display: block;
+  }
   .footer .container,
   .navigation .container {
     display: flex;
