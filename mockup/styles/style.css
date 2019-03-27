@@ -2,12 +2,22 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  text-emphasis-color: #484340;
 }
 
 body {
   font-size: 16px;
-  font-style: normal;
   font-family: "Montserrat", sans-serif;
+}
+
+.slick-arrow {
+  padding: 10px;
+  color: white;
+  background-color: grey;
+}
+
+.slick-arrow:not(.slick-disabled) {
+  background-color: red;
 }
 
 .container {
@@ -18,13 +28,25 @@ body {
 .hamburger-container {
   display: flex;
 }
+
 .navigation {
   background-color: #211d1c;
   padding: 0.625rem 1.25rem;
 }
+
 .hamburger {
   color: white;
   padding-right: 20px;
+}
+
+.client-image {
+  padding-bottom: 70px;
+}
+
+.icon-arrow-right {
+  border: 1px solid;
+  border-radius: 50%;
+  position: absolute;
 }
 
 .icon-user {
@@ -51,9 +73,11 @@ body {
   background-color: #211d1c;
   opacity: 0.8;
 }
+
 .logo span {
   color: red;
 }
+
 .links a:hover {
   background-color: rgb(71, 71, 71);
   opacity: 1;
@@ -86,12 +110,11 @@ a {
   background-position: center;
 }
 
-.banner-text > h2 {
+.banner-text h2 {
   font-size: 30px;
 }
 
 .service--images {
-  display: block;
   margin-top: 30px;
 }
 
@@ -130,10 +153,12 @@ img {
 .marius-map {
   padding-top: 15px;
 }
+
 .marius-heading {
   font-size: 18px;
   padding-top: 20px;
 }
+
 .marius-subheading {
   padding-top: 20px;
   font-size: 14px;
@@ -152,6 +177,7 @@ img {
   display: flex;
   justify-content: space-around;
   margin: 30px 0 30px;
+  position: relative;
 }
 .testimonial-client {
   color: black;
@@ -160,6 +186,7 @@ img {
 .client-image {
   display: flex;
   padding-top: 30px;
+  justify-content: center;
 }
 
 .testimonial-text > p:after {
@@ -175,6 +202,12 @@ img {
   left: 20px;
 }
 
+.testimonial-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .testimonial-text > p {
   color: grey;
   text-align: center;
@@ -186,6 +219,7 @@ img {
   font-size: 14px;
   position: relative;
   margin-bottom: 20px;
+  margin: auto;
 }
 
 .story-title {
@@ -211,6 +245,7 @@ img {
 .story:last-child {
   margin-right: 0;
 }
+
 .story-title .story-subtitle {
   text-align: center;
 }
@@ -250,9 +285,6 @@ img {
   background-size: cover;
 }
 
-.middle h2 {
-  padding-bottom: 20px;
-}
 .navigation a {
   padding: 5px 20px;
   display: block;
@@ -333,6 +365,9 @@ img {
 .icon-cheveron-down:after {
   content: "\e902";
   color: grey;
+  position: relative;
+  top: 4px;
+  padding-left: 5px;
 }
 
 .icon-message:before {
@@ -344,11 +379,44 @@ img {
   color: #fff;
   background-color: orangered;
   display: block;
+  border-radius: 15px;
+  padding: 0 10px 0 10px;
+}
+
+.middle h2 {
+  padding-bottom: 20px;
+  font-size: 20px;
 }
 
 @media screen and (min-width: 768px) {
+  /* .icon-arrow-left {
+    background-color: grey;
+    border: 1px solid;
+    border-radius: 50%;
+    align-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .icon-arrow-right {
+    background-color: red;
+    border: 1px solid;
+    border-radius: 50%;
+    align-content: center;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  } */
+
   .stories--wrapper {
     display: flex;
+  }
+
+  .middle h2 {
+    padding-bottom: 20px;
+    font-size: 15px;
   }
 
   .story {
@@ -533,8 +601,38 @@ button {
     font-size: 18px;
     padding-top: 20px;
   }
+
   .marius-subheading {
     padding-top: 20px;
     font-size: 14px;
+  }
+
+  .icon-arrow-left {
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .icon-arrow-right {
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .icon-arrow-right {
+    left: 50%;
+  }
+  .icon-arrow-left {
+    border: 1px solid;
+    border-radius: 50%;
+    position: absolute;
+    top: 100%;
+    right: 60%;
   }
 }
